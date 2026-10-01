@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daren Samson | Seven-Figure DTC Operations Portfolio</title>
+<meta name="description" content="Interactive Senior Operations Manager portfolio demonstrating seven-figure DTC e-commerce operations, procurement, finance controls, 3PL, systems and automation.">
+<style>
+:root{--bg:#07111e;--panel:#0d1b2b;--card:#102238;--line:#2a405a;--text:#eef5fc;--muted:#9fb2c8;--accent:#57c8b8;--blue:#79aaff;--good:#7de0ad;--warn:#ffd06a;--bad:#ff909c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#07111e,#0a1522);color:var(--text);font:14px/1.5 Arial,Helvetica,sans-serif}
+button,input,select{font:inherit}button{cursor:pointer}
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh}.side{position:sticky;top:0;height:100vh;overflow:auto;padding:18px 14px;background:#081522;border-right:1px solid var(--line)}
+.brand{padding:0 6px 15px;border-bottom:1px solid var(--line);margin-bottom:10px}.brand b{display:block;font-size:19px}.brand small{color:var(--muted)}.contact{font-size:11px;color:#c9d6e4;margin-top:8px;line-height:1.6}.contact a{color:inherit;text-decoration:none}
+.badge{display:inline-block;margin-top:8px;padding:5px 8px;border:1px solid #35556d;border-radius:999px;color:#c6eee8;background:#0a1e25;font-size:10px}
+.nav{display:grid;gap:4px}.nav button{border:0;background:transparent;color:#b5c6d8;text-align:left;padding:10px;border-radius:8px}.nav button.active,.nav button:hover{background:#14283f;color:#fff}
+.note{margin-top:14px;padding:10px;border:1px solid var(--line);border-radius:10px;background:#0c1a2a;color:var(--muted);font-size:11px}
+main{min-width:0;padding:22px}.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px}.top h1{margin:0 0 4px;font-size:24px}.top p{margin:0;color:var(--muted)}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #38536e;background:#12253c;color:#fff;border-radius:8px;padding:9px 12px}.btn.primary{background:var(--accent);border-color:var(--accent);color:#041917;font-weight:800}
+.banner{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;align-items:center;padding:18px;margin-bottom:14px;border:1px solid #3b6f78;border-radius:14px;background:linear-gradient(135deg,#102d35,#11213a)}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#95ddd4;font-weight:800}.banner h2{font-size:27px;line-height:1.15;margin:5px 0 7px}.banner p{margin:0;color:#cbd8e6}.chip{display:inline-block;margin-top:10px;padding:5px 8px;border-radius:999px;border:1px solid #36536c;background:#0a1726;color:#c8d6e5;font-size:10px}
+.scale{display:grid;grid-template-columns:1fr 1fr;gap:8px}.stat{padding:10px;border:1px solid #36516a;border-radius:10px;background:#0c1a2a}.stat span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase}.stat b{display:block;font-size:18px;margin-top:3px}
+.section{display:none}.section.active{display:block}.grid{display:grid;gap:12px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:12px}.card{background:linear-gradient(180deg,#112239,#0d1b2c);border:1px solid var(--line);border-radius:12px;padding:14px}.label{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}.value{font-size:23px;font-weight:800;margin:4px 0}.sub{color:var(--muted);font-size:11px}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.row2{grid-template-columns:1.2fr .8fr}.row3{grid-template-columns:repeat(3,1fr)}
+.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#0f1e31;color:#afc1d4;font-size:10px;text-transform:uppercase}tr:last-child td{border-bottom:0}
+.pill{display:inline-block;padding:3px 7px;border-radius:999px;font-size:10px;border:1px solid #39506a;background:#102036}.pill.good{color:#9af0c1;border-color:#2f6a55;background:#102c24}.pill.warn{color:#ffe08a;border-color:#705b2f;background:#2d2415}.pill.bad{color:#ffa3ad;border-color:#74434a;background:#2d181c}
+.list{display:grid;gap:8px}.item{display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:start;padding:10px;border:1px solid var(--line);border-radius:9px;background:#0d1a2a}.dot{width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:5px}.item strong{display:block}.item small{color:var(--muted)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.toolbar input,.toolbar select{background:#091624;color:#fff;border:1px solid #31455f;border-radius:8px;padding:9px 10px}
+.callout{padding:10px 12px;border-left:3px solid var(--accent);border-radius:8px;background:#0b1e27;color:#d4ece9}.callout.warn{border-left-color:var(--warn);background:#211d12}.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{padding:10px;border:1px solid var(--line);border-radius:9px;background:#0b1929}.metric span{color:var(--muted);font-size:11px}.metric b{display:block;font-size:17px;margin-top:3px}
+.fit{display:grid;grid-template-columns:1.2fr .55fr 1.7fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.fit:last-child{border-bottom:0}
+.chart{display:flex;gap:8px;align-items:flex-end;height:150px;padding:12px 5px 25px}.bar{flex:1;min-width:20px;background:linear-gradient(180deg,#7aabff,#2e6098);border-radius:5px 5px 2px 2px;position:relative}.bar em{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-style:normal;font-size:10px}.bar span{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--muted)}
+.console{white-space:pre-wrap;background:#06101b;border:1px solid var(--line);border-radius:9px;padding:12px;color:#bdd9f5;font-family:ui-monospace,Menlo,monospace}
+.drawer{position:fixed;right:18px;top:18px;bottom:18px;width:min(420px,calc(100vw - 36px));background:#0b1728;border:1px solid #3b506a;border-radius:13px;padding:17px;display:none;overflow:auto;z-index:30;box-shadow:0 20px 70px rgba(0,0,0,.5)}.drawer.open{display:block}.drawerhead{display:flex;justify-content:space-between;gap:10px}.drawerhead h2{margin:0}.close{width:34px;height:34px;border:1px solid var(--line);border-radius:8px;background:#102038;color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);padding:9px 13px;background:#14263d;border:1px solid #405b78;border-radius:9px;display:none;z-index:40}.toast.show{display:block}.mobile{display:none}.footer{margin-top:17px;color:#73879d;font-size:10px}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}.row2,.banner{grid-template-columns:1fr}.row3{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.side{display:none}main{padding:14px 12px 78px}.top{flex-direction:column}.kpis,.row3,.mini,.fit{grid-template-columns:1fr}.scale{grid-template-columns:1fr 1fr}.banner h2{font-size:22px}.mobile{display:flex;position:fixed;left:9px;right:9px;bottom:9px;z-index:20;overflow:auto;gap:4px;padding:6px;background:#091523;border:1px solid #2e435c;border-radius:11px}.mobile button{white-space:nowrap;border:0;background:transparent;color:#b8c7d8;padding:8px 10px;border-radius:7px}.mobile button.active{background:#19314a;color:#fff}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="side">
+<div class="brand"><b>Daren Samson</b><small>Interactive Operations Portfolio</small><div class="contact"><a href="mailto:daren.samson03@gmail.com">daren.samson03@gmail.com</a><br><a href="tel:+639542354087">+63 954 235 4087</a><br>Cavite, Philippines · AEST-ready</div><span class="badge">● Synthetic portfolio data</span></div>
+<nav class="nav">
+<button class="active" data-page="command">Command Center</button>
+<button data-page="orders">Orders & Fulfillment</button>
+<button data-page="inventory">Inventory & Procurement</button>
+<button data-page="finance">Finance Control</button>
+<button data-page="systems">Systems Monitor</button>
+<button data-page="vendors">3PL / Vendors / Contractors</button>
+<button data-page="automation">Automation Engine</button>
+<button data-page="cases">Case Studies</button>
+<button data-page="fit">Experience & Role Fit</button>
+<button data-page="walk">90-Second Walkthrough</button>
+</nav>
+<div class="note">Designed to show how I would structure visibility, ownership, exceptions, controls and follow-through for a seven-figure DTC operation. No confidential client data is used.</div>
+</aside>
+<main>
+<div class="top"><div><h1 id="title">Command Center</h1><p>Supply, finance, systems, vendors and operating exceptions in one view.</p></div><div class="actions"><button class="btn" id="check">Run Control Check</button><button class="btn" id="next">Simulate Next Day</button><button class="btn primary" id="export">Export Ops Summary</button></div></div>
+
+<div class="banner">
+<div><div class="eyebrow">Recruiter Snapshot · Target Operating Scale</div><h2>Seven-Figure DTC E-Commerce Operations Simulation | ~$6.7M Annualized Revenue</h2><p>Interactive operations workspace demonstrating how I would own supply, procurement, cash-out timing, vendor performance, systems, finance controls and exception management for a 7-figure DTC brand.</p><span class="chip">Synthetic portfolio data · no confidential client data</span></div>
+<div class="scale"><div class="stat"><span>Rolling 12-Month Revenue</span><b>$6.72M</b></div><div class="stat"><span>Avg Monthly Revenue</span><b>$560K</b></div><div class="stat"><span>Annual Procurement Spend</span><b>$2.16M</b></div><div class="stat"><span>Inventory Value</span><b>$430K</b></div></div>
+</div>
+
+<section class="section active" id="command">
+<div class="grid kpis">
+<div class="card"><div class="label">Daily Revenue</div><div class="value">$18,420</div><div class="sub good">+8.4% vs 7-day avg</div></div>
+<div class="card"><div class="label">3PL Same-Day Ship SLA</div><div class="value">97.8%</div><div class="sub good">Target ≥97%</div></div>
+<div class="card"><div class="label">Open Exceptions</div><div class="value" id="exc">4</div><div class="sub">Requires ownership today</div></div>
+<div class="card"><div class="label">Cash Due This Week</div><div class="value">$12,780</div><div class="sub">Suppliers + contractors</div></div>
+</div>
+<div class="grid row2">
+<div class="card"><h3>Operational Exception Queue</h3><div class="tablewrap"><table id="extable"><thead><tr><th>Area</th><th>Exception</th><th>Risk</th><th>Owner</th><th>Next Action</th></tr></thead><tbody>
+<tr><td>Inventory</td><td>FlexJoint 60ct at 18 days cover</td><td><span class="pill warn">Medium</span></td><td>Ops</td><td>Advance PO by 5 days</td></tr>
+<tr><td>Supplier</td><td>Invoice INV-441 overdue</td><td><span class="pill bad">High</span></td><td>Finance</td><td>Validate receipt and release payment</td></tr>
+<tr><td>3PL</td><td>Pick accuracy at 98.1%</td><td><span class="pill warn">Medium</span></td><td>Ops</td><td>Review top error SKU</td></tr>
+<tr><td>System</td><td>Subscription retry rate increased</td><td><span class="pill warn">Medium</span></td><td>Tech</td><td>Audit failed-payment flow</td></tr>
+</tbody></table></div></div>
+<div class="card"><h3>Daily Operating Rhythm</h3><div class="list">
+<div class="item"><span class="dot"></span><div><strong>09:00 AEST</strong><small>Revenue, systems, stock and fulfillment controls</small></div><span class="pill good">Done</span></div>
+<div class="item"><span class="dot"></span><div><strong>11:30 AEST</strong><small>PO, supplier and cash-out review</small></div><span class="pill">Due</span></div>
+<div class="item"><span class="dot"></span><div><strong>15:00 AEST</strong><small>3PL, contractor and exception review</small></div><span class="pill">Due</span></div>
+<div class="item"><span class="dot"></span><div><strong>16:45 AEST</strong><small>Founder-ready daily operating summary</small></div><span class="pill">Due</span></div>
+</div></div></div>
+</section>
+
+<section class="section" id="orders">
+<div class="grid kpis"><div class="card"><div class="label">Orders Today</div><div class="value">412</div><div class="sub">DTC + subscriptions</div></div><div class="card"><div class="label">Fulfilled</div><div class="value">386</div><div class="sub good">93.7%</div></div><div class="card"><div class="label">Exception Orders</div><div class="value">9</div><div class="sub warn">2 high priority</div></div><div class="card"><div class="label">Refund Exposure</div><div class="value">$1,240</div><div class="sub">Pending review</div></div></div>
+<div class="card"><div class="toolbar"><input id="search" placeholder="Search order / customer / SKU"><select id="status"><option value="all">All statuses</option><option>Ready</option><option>Hold</option><option>Exception</option></select></div><div class="tablewrap"><table id="ordersTable"><thead><tr><th>Order</th><th>Customer</th><th>SKU</th><th>Status</th><th>Issue</th><th>Action</th></tr></thead><tbody>
+<tr data-status="Ready"><td>#CH10481</td><td>A. Morgan</td><td>JF60</td><td><span class="pill good">Ready</span></td><td>—</td><td><button class="btn detail" data-title="Order #CH10481" data-body="Payment captured, inventory allocated and pick ticket released.">View</button></td></tr>
+<tr data-status="Exception"><td>#CH10492</td><td>R. Ellis</td><td>JF60</td><td><span class="pill bad">Exception</span></td><td>Address validation</td><td><button class="btn detail" data-title="Order #CH10492" data-body="Address validation failed. Hold shipment and contact customer before fulfillment cutoff.">View</button></td></tr>
+<tr data-status="Hold"><td>#CH10501</td><td>K. Porter</td><td>MB90</td><td><span class="pill warn">Hold</span></td><td>Subscription retry</td><td><button class="btn detail" data-title="Order #CH10501" data-body="Payment retry in progress. Inventory reserved for 24 hours.">View</button></td></tr>
+<tr data-status="Ready"><td>#CH10508</td><td>M. Shaw</td><td>JF60</td><td><span class="pill good">Ready</span></td><td>—</td><td><button class="btn detail" data-title="Order #CH10508" data-body="Subscription renewal cleared and fulfillment released.">View</button></td></tr>
+</tbody></table></div></div>
+</section>
+
+<section class="section" id="inventory">
+<div class="grid row2"><div class="card"><h3>Inventory Coverage</h3><div class="tablewrap"><table><thead><tr><th>SKU</th><th>On Hand</th><th>Daily Velocity</th><th>Days Cover</th><th>PO Status</th><th>Rule</th></tr></thead><tbody>
+<tr><td>JF60</td><td>2,180</td><td>121</td><td><span class="pill warn">18 days</span></td><td>Draft PO</td><td>Reorder under 21 days</td></tr><tr><td>MB90</td><td>4,420</td><td>88</td><td><span class="pill good">50 days</span></td><td>None</td><td>Healthy</td></tr><tr><td>TR30</td><td>1,860</td><td>54</td><td><span class="pill good">34 days</span></td><td>In transit</td><td>Track ETA</td></tr>
+</tbody></table></div></div>
+<div class="card"><h3>Purchase Order Control</h3><div class="mini"><div class="metric"><span>Target cover</span><b>60 days</b></div><div class="metric"><span>Lead time</span><b>28 days</b></div><div class="metric"><span>Safety buffer</span><b>14 days</b></div></div><div class="callout warn" style="margin-top:10px">JF60 crossed the reorder threshold. Recommended order: <b>6,250 units</b>.</div><button class="btn primary" id="po" style="margin-top:10px">Generate Draft PO</button></div></div>
+<div class="card" style="margin-top:12px"><h3>Demand Trend</h3><div class="chart"><div class="bar" style="height:54%"><em>81</em><span>W1</span></div><div class="bar" style="height:62%"><em>93</em><span>W2</span></div><div class="bar" style="height:69%"><em>104</em><span>W3</span></div><div class="bar" style="height:74%"><em>111</em><span>W4</span></div><div class="bar" style="height:81%"><em>121</em><span>W5</span></div></div></div>
+</section>
+
+<section class="section" id="finance">
+<div class="grid kpis"><div class="card"><div class="label">Net Sales / Month</div><div class="value">$560K</div><div class="sub">Simulation</div></div><div class="card"><div class="label">COGS</div><div class="value">$180K</div><div class="sub">32.1%</div></div><div class="card"><div class="label">Contribution</div><div class="value">$172K</div><div class="sub good">30.7% margin</div></div><div class="card"><div class="label">Annual Procurement</div><div class="value">$2.16M</div><div class="sub">Simulated run rate</div></div></div>
+<div class="grid row2"><div class="card"><h3>Monthly P&L Snapshot</h3><div class="tablewrap"><table><thead><tr><th>Line</th><th>Amount</th><th>Control</th></tr></thead><tbody><tr><td>Gross Sales</td><td>$584K</td><td><span class="pill good">Imported</span></td></tr><tr><td>Refunds / Discounts</td><td>-$24K</td><td><span class="pill good">Matched</span></td></tr><tr><td>Net Sales</td><td>$560K</td><td><span class="pill good">Ready</span></td></tr><tr><td>COGS</td><td>-$180K</td><td><span class="pill good">Updated</span></td></tr><tr><td>Ad Spend</td><td>-$125K</td><td><span class="pill">Reviewed</span></td></tr><tr><td>3PL / Shipping</td><td>-$48K</td><td><span class="pill warn">Estimate</span></td></tr><tr><td>Contractors / Software</td><td>-$35K</td><td><span class="pill">Reviewed</span></td></tr><tr><td><b>Contribution</b></td><td><b>$172K</b></td><td><span class="pill good">30.7%</span></td></tr></tbody></table></div></div>
+<div class="card"><h3>Payables / Cash-Out Queue</h3><div class="list"><div class="item"><span class="dot" style="background:var(--bad)"></span><div><strong>Supplier INV-441</strong><small>$6,820 · receipt validation required</small></div><span class="pill bad">Hold</span></div><div class="item"><span class="dot"></span><div><strong>3PL Weekly Invoice</strong><small>$3,160 · matched to shipment summary</small></div><span class="pill good">Ready</span></div><div class="item"><span class="dot"></span><div><strong>Contractor Payroll</strong><small>$2,800 · approved hours validated</small></div><span class="pill good">Ready</span></div></div></div></div>
+<div class="callout" style="margin-top:12px">This demonstrates an operations-control workflow for daily P&L preparation, invoice validation, cash-out timing and management reporting. It does not represent CPA/accounting certification.</div>
+</section>
+
+<section class="section" id="systems">
+<div class="grid row3"><div class="card"><h3>Shopify</h3><div class="value good">Direct Experience</div><div class="sub">Orders, fulfillment and workflow coordination</div></div><div class="card"><h3>Loop Subscriptions</h3><div class="value warn">Ramp-Up</div><div class="sub">Target-stack system, not overstated as deep prior expertise</div></div><div class="card"><h3>Checkout Champ</h3><div class="value warn">Ramp-Up</div><div class="sub">Target-stack system, monitored through revenue-flow controls</div></div></div>
+<div class="card" style="margin-top:12px"><h3>Revenue-System Controls</h3><div class="list"><div class="item"><span class="dot"></span><div><strong>Failed-payment spike</strong><small>Alert above baseline threshold</small></div><span class="pill good">Active</span></div><div class="item"><span class="dot"></span><div><strong>Order sync delay</strong><small>Alert if sync exceeds 5 minutes</small></div><span class="pill good">Active</span></div><div class="item"><span class="dot"></span><div><strong>Checkout conversion drop</strong><small>Flag material variance for review</small></div><span class="pill good">Active</span></div><div class="item"><span class="dot"></span><div><strong>Meta / Google / Klaviyo</strong><small>Operational familiarity: reporting, workflow coordination and issue follow-through</small></div><span class="pill">Ops</span></div></div></div>
+</section>
+
+<section class="section" id="vendors">
+<div class="grid row2"><div class="card"><h3>3PL Scorecard</h3><div class="tablewrap"><table><thead><tr><th>Metric</th><th>Target</th><th>Actual</th><th>Status</th></tr></thead><tbody><tr><td>Same-day ship</td><td>≥97%</td><td>97.8%</td><td><span class="pill good">Pass</span></td></tr><tr><td>Pick accuracy</td><td>≥99%</td><td>98.1%</td><td><span class="pill warn">Review</span></td></tr><tr><td>Damage rate</td><td>≤0.5%</td><td>0.3%</td><td><span class="pill good">Pass</span></td></tr><tr><td>Support SLA</td><td>≤4 hrs</td><td>2.6 hrs</td><td><span class="pill good">Pass</span></td></tr></tbody></table></div></div>
+<div class="card"><h3>Contractor Work Queue</h3><div class="list"><div class="item"><span class="dot"></span><div><strong>Checkout QA</strong><small>Acceptance criteria attached</small></div><span class="pill good">On track</span></div><div class="item"><span class="dot"></span><div><strong>Subscription Retry Audit</strong><small>Technical review requested</small></div><span class="pill warn">Due today</span></div><div class="item"><span class="dot"></span><div><strong>Klaviyo Event QA</strong><small>Data validation completed</small></div><span class="pill good">Closed</span></div></div></div></div>
+</section>
+
+<section class="section" id="automation">
+<div class="grid row2"><div class="card"><h3>Rule Engine</h3><div class="list"><div class="item"><span class="dot"></span><div><strong>Low Stock</strong><small>If days cover &lt;21 → procurement alert</small></div><span class="pill good">ON</span></div><div class="item"><span class="dot"></span><div><strong>Late Supplier Invoice</strong><small>Validate receipt → hold / escalate</small></div><span class="pill good">ON</span></div><div class="item"><span class="dot"></span><div><strong>3PL Quality Dip</strong><small>If pick accuracy &lt;99% → vendor issue ticket</small></div><span class="pill good">ON</span></div><div class="item"><span class="dot"></span><div><strong>Revenue-System Anomaly</strong><small>Retry/sync threshold breach → technical review</small></div><span class="pill good">ON</span></div></div></div>
+<div class="card"><h3>Automation Test Console</h3><div class="console" id="console">Ready.
+No rule execution has been run in this session.</div><button class="btn primary" id="rules" style="margin-top:10px">Run Rules Now</button></div></div>
+</section>
+
+<section class="section" id="cases">
+<div class="grid row3"><div class="card"><h3>High-Volume E-Commerce Operations</h3><p class="sub">Order-to-cash, quotations, purchase and sales orders, invoices, payment-status checks, fulfillment issues, returns, refunds, replacements, shipment tracking, vendor and warehouse coordination.</p></div><div class="card"><h3>Remote Service Operations</h3><p class="sub">Scheduling, dispatch, billing, payments, international partner coordination, escalations, cross-time-zone handoffs and remote team continuity.</p></div><div class="card"><h3>Claims / Billing Control</h3><p class="sub">Regulated documentation, invoice and payment discrepancies, escalations, audit-ready case notes and stakeholder follow-up.</p></div></div>
+</section>
+
+<section class="section" id="fit">
+<div class="card"><h3>Choppa Ecom Role Alignment</h3>
+<div class="fit"><b>Back-end e-commerce operations</b><span class="pill good">Strong match</span><span class="sub">Order management, fulfillment, vendor coordination, SOPs, escalations and remote execution.</span></div>
+<div class="fit"><b>Stock / PO / procurement</b><span class="pill warn">Transferable</span><span class="sub">Supplier, order and inventory workflows; portfolio demonstrates forecasting and PO-control method.</span></div>
+<div class="fit"><b>Shopify</b><span class="pill good">Direct</span><span class="sub">Hands-on e-commerce workflow experience.</span></div>
+<div class="fit"><b>Loop / Checkout Champ</b><span class="pill warn">Ramp-up</span><span class="sub">Target-stack systems, clearly not overstated as deep prior expertise.</span></div>
+<div class="fit"><b>3PL / vendors / contractors</b><span class="pill good">Strong match</span><span class="sub">Extensive coordination with vendors, carriers, suppliers, service partners and remote teams.</span></div>
+<div class="fit"><b>Daily P&L / cash-out control</b><span class="pill warn">Ops-level</span><span class="sub">Invoice, payment, reconciliation logic and reporting experience.</span></div>
+<div class="fit"><b>Independent ownership</b><span class="pill good">Strong match</span><span class="sub">SOPs, trackers, escalation rules and workflows built to minimize constant management intervention.</span></div>
+<div class="fit"><b>Australian business hours / AEST</b><span class="pill good">Ready</span><span class="sub">Prior Australian insurance-account exposure plus international, cross-time-zone operations experience.</span></div>
+</div></section>
+
+<section class="section" id="walk">
+<div class="card"><h3>90-Second Recruiter Walkthrough</h3><div class="list"><div class="item"><span class="dot"></span><div><strong>1. Command Center</strong><small>Seven-figure scale, KPIs and exception ownership.</small></div><span class="pill">15 sec</span></div><div class="item"><span class="dot"></span><div><strong>2. Inventory & Procurement</strong><small>Stock-cover logic, reorder thresholds and PO generation.</small></div><span class="pill">20 sec</span></div><div class="item"><span class="dot"></span><div><strong>3. Finance Control</strong><small>P&L preparation, invoice validation and cash-out controls.</small></div><span class="pill">20 sec</span></div><div class="item"><span class="dot"></span><div><strong>4. Systems + Automation</strong><small>Revenue-flow, stock and vendor exceptions surface before founder involvement.</small></div><span class="pill">20 sec</span></div><div class="item"><span class="dot"></span><div><strong>5. Role Fit</strong><small>Direct strengths, transferable areas and transparent ramp-up points.</small></div><span class="pill">15 sec</span></div></div></div>
+</section>
+
+<div class="footer">Daren Samson | Senior Operations Manager · E-Commerce & Remote Operations · Interactive portfolio using synthetic demonstration data.</div>
+</main></div>
+
+<div class="mobile">
+<button class="active" data-page="command">Command</button><button data-page="orders">Orders</button><button data-page="inventory">Inventory</button><button data-page="finance">Finance</button><button data-page="systems">Systems</button><button data-page="automation">Automation</button><button data-page="fit">Fit</button>
+</div>
+<div class="drawer" id="drawer"><div class="drawerhead"><h2 id="dtitle">Detail</h2><button class="close" id="close">×</button></div><p id="dbody" class="sub"></p></div><div class="toast" id="toast"></div>
+<script>
+(()=>{const titles={command:"Command Center",orders:"Orders & Fulfillment",inventory:"Inventory & Procurement",finance:"Finance Control",systems:"Systems Monitor",vendors:"3PL / Vendors / Contractors",automation:"Automation Engine",cases:"Case Studies",fit:"Experience & Role Fit",walk:"90-Second Walkthrough"};
+const sections=[...document.querySelectorAll(".section")],nav=[...document.querySelectorAll("[data-page]")],title=document.getElementById("title");
+function page(id){sections.forEach(s=>s.classList.toggle("active",s.id===id));nav.forEach(b=>b.classList.toggle("active",b.dataset.page===id));title.textContent=titles[id]||"Operations Portfolio";window.scrollTo({top:0,behavior:"smooth"})}nav.forEach(b=>b.addEventListener("click",()=>page(b.dataset.page)));
+const toast=document.getElementById("toast");function say(m){toast.textContent=m;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2000)}
+document.getElementById("check").addEventListener("click",()=>say("Control check complete: 4 exceptions remain open."));
+document.getElementById("next").addEventListener("click",()=>{document.getElementById("exc").textContent="5";if(!document.getElementById("sim")){const tr=document.createElement("tr");tr.id="sim";tr.innerHTML='<td>Inventory</td><td>TR30 inbound ETA slipped by 2 days</td><td><span class="pill warn">Medium</span></td><td>Ops</td><td>Recalculate cover and expedite if threshold is breached</td>';document.querySelector("#extable tbody").appendChild(tr)}say("Next-day simulation added one new exception.")});
+document.getElementById("export").addEventListener("click",()=>{const t="DAREN SAMSON - OPERATIONS SUMMARY\n\nAnnualized DTC revenue simulation: $6.72M\nMonthly revenue: $560K\nOpen exceptions: "+document.getElementById("exc").textContent+"\nInventory: JF60 under 21-day threshold\nFinance: supplier invoice validation required\n3PL: pick accuracy below 99% target\nSystems: subscription retry variance under review";const b=new Blob([t],{type:"text/plain"}),u=URL.createObjectURL(b),a=document.createElement("a");a.href=u;a.download="Daren_Samson_Operations_Summary.txt";a.click();setTimeout(()=>URL.revokeObjectURL(u),400);say("Operations summary exported.")});
+const q=document.getElementById("search"),f=document.getElementById("status");function filter(){const s=q.value.toLowerCase(),v=f.value;document.querySelectorAll("#ordersTable tbody tr").forEach(r=>r.style.display=(!s||r.innerText.toLowerCase().includes(s))&&(v==="all"||r.dataset.status===v)?"":"none")}q.addEventListener("input",filter);f.addEventListener("change",filter);
+const dr=document.getElementById("drawer");document.querySelectorAll(".detail").forEach(b=>b.addEventListener("click",()=>{document.getElementById("dtitle").textContent=b.dataset.title;document.getElementById("dbody").textContent=b.dataset.body;dr.classList.add("open")}));document.getElementById("close").addEventListener("click",()=>dr.classList.remove("open"));
+document.getElementById("po").addEventListener("click",()=>{document.getElementById("dtitle").textContent="Draft Purchase Order";document.getElementById("dbody").innerHTML="<b>SKU:</b> JF60<br><b>Recommended quantity:</b> 6,250 units<br><b>Trigger:</b> 18 days cover vs 21-day reorder threshold<br><b>Lead time:</b> 28 days<br><b>Safety buffer:</b> 14 days<br><br>Draft only. Supplier terms, landed cost and cash-out timing require final review.";dr.classList.add("open")});
+document.getElementById("rules").addEventListener("click",()=>{document.getElementById("console").textContent="Rule test complete.\n✓ Low-stock rule triggered for JF60.\n✓ Late-invoice rule triggered for INV-441.\n✓ 3PL quality rule triggered at 98.1% pick accuracy.\n✓ Revenue-system anomaly rule triggered on subscription retry variance.\n\n4 actions routed to owner queues.";say("Automation rules executed.")});
+})();
+</script>
+</body></html>
